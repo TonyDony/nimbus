@@ -1,5 +1,5 @@
 //
-// Copyright 2011-2014 Jeff Verkoeyen
+// Copyright 2011-2014 NimbusKit
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,25 +14,16 @@
 // limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "NIPagingScrollViewPage.h"
 
-/**
- * A skeleton implementation of a page view.
- *
- * This view simply implements the required properties of NIPagingScrollViewPage.
- *
- * TODO: Rename this to NIPagingScrollViewPage.
- *
- *      @ingroup NimbusPagingScrollView
- */
-@interface NIPageView : NIRecyclableView <NIPagingScrollViewPage>
-@property (nonatomic, assign) NSInteger pageIndex;
+#import "NimbusCore.h"
+
+#if !defined(__has_feature) || !__has_feature(objc_arc)
+#error "Nimbus requires ARC support."
+#endif
+
+@implementation NIPagingScrollViewPage
 @end
 
-/**
- * The page index.
- *
- *      @fn NIPageView::pageIndex
- */
+@implementation NIPageView
+@end
