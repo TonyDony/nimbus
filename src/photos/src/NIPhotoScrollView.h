@@ -26,7 +26,7 @@
 /**
  * A single photo view that supports zooming and rotation.
  *
- *      @ingroup NimbusPhotos
+ * @ingroup NimbusPhotos
  */
 @interface NIPhotoScrollView : UIView <UIScrollViewDelegate, NIPagingScrollViewPage>
 
@@ -58,7 +58,7 @@
  *
  * By default this is YES.
  *
- *      @fn NIPhotoScrollView::zoomingIsEnabled
+ * @fn NIPhotoScrollView::zoomingIsEnabled
  */
 
 /**
@@ -72,13 +72,13 @@
  *
  * The default behavior in Photos.app allows small photos to be zoomed in.
  *
- *      @attention This will allow photos to be zoomed in even if they don't have any more
+ * @attention This will allow photos to be zoomed in even if they don't have any more
  *                 pixels to show, causing the photo to blur. This can look ok for photographs,
  *                 but might not look ok for software design mockups.
  *
  * By default this is YES.
  *
- *      @fn NIPhotoScrollView::zoomingAboveOriginalSizeIsEnabled
+ * @fn NIPhotoScrollView::zoomingAboveOriginalSizeIsEnabled
  */
 
 /**
@@ -88,7 +88,7 @@
  *
  * By default this is YES.
  *
- *      @fn NIPhotoScrollView::doubleTapToZoomIsEnabled
+ * @fn NIPhotoScrollView::doubleTapToZoomIsEnabled
  */
 
 /**
@@ -97,13 +97,13 @@
  * By default this is 0, meaning the view will automatically determine the maximum scale.
  * Setting this to a non-zero value will override the automatically-calculated maximum scale.
  *
- *      @fn NIPhotoScrollView::maximumScale
+ * @fn NIPhotoScrollView::maximumScale
  */
 
 /**
  * The photo scroll view delegate.
  *
- *      @fn NIPhotoScrollView::photoScrollViewDelegate
+ * @fn NIPhotoScrollView::photoScrollViewDelegate
  */
 
 
@@ -112,7 +112,7 @@
 /**
  * The currently-displayed photo.
  *
- *      @fn NIPhotoScrollView::image
+ * @fn NIPhotoScrollView::image
  */
 
 /**
@@ -122,13 +122,13 @@
  *
  * Resets the current zoom levels and zooms to fit the image.
  *
- *      @fn NIPhotoScrollView::setImage:photoSize:
+ * @fn NIPhotoScrollView::setImage:photoSize:
  */
 
 /**
  * The index of this photo within a photo album.
  *
- *      @fn NIPhotoScrollView::pageIndex
+ * @fn NIPhotoScrollView::pageIndex
  */
 
 /**
@@ -136,7 +136,7 @@
  *
  * This is used to replace the photo only with successively higher-quality versions.
  *
- *      @fn NIPhotoScrollView::photoSize
+ * @fn NIPhotoScrollView::photoSize
  */
 
 /**
@@ -150,7 +150,7 @@
  *
  * CGSizeZero is used to signify an unknown final photo dimension.
  *
- *      @fn NIPhotoScrollView::photoDimensions
+ * @fn NIPhotoScrollView::photoDimensions
  */
 
 /**
@@ -158,5 +158,5 @@
  *
  * This is used mainly for setting up dependencies between gesture recognizers.
  *
- *      @fn NIPhotoScrollView::doubleTapGestureRecognizer
+ * @fn NIPhotoScrollView::doubleTapGestureRecognizer
  */

@@ -72,7 +72,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * NIAttributedLabel implements the UIAccessibilityContainer methods to expose each link as an
  * accessibility item.
  *
- *      @ingroup NimbusAttributedLabel
+ * @ingroup NimbusAttributedLabel
  */
 @interface NIAttributedLabel : UILabel
 
@@ -133,9 +133,9 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
 /**
  * Informs the receiver that a data detector result has been selected.
  *
- *      @param attributedLabel An attributed label informing the receiver of the selection.
- *      @param result The data detector result that was selected.
- *      @param point The point within @c attributedLabel where the result was tapped.
+ * @param attributedLabel An attributed label informing the receiver of the selection.
+ * @param result The data detector result that was selected.
+ * @param point The point within @c attributedLabel where the result was tapped.
  */
 - (void)attributedLabel:(NIAttributedLabel *)attributedLabel didSelectTextCheckingResult:(NSTextCheckingResult *)result atPoint:(CGPoint)point;
 
@@ -148,12 +148,12 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * example, a link will have the actions "Open in Safari" and "Copy URL". A phone number will have
  * @"Call" and "Copy Phone Number".
  *
- *      @param attributedLabel An attributed label asking the delegate whether to display the action
+ * @param attributedLabel An attributed label asking the delegate whether to display the action
  *                             sheet.
- *      @param actionSheet The action sheet that will be displayed if YES is returned.
- *      @param result The data detector result that was selected.
- *      @param point The point within @c attributedLabel where the result was tapped.
- *      @returns YES if @c actionSheet should be displayed. NO if @c actionSheet should not be
+ * @param actionSheet The action sheet that will be displayed if YES is returned.
+ * @param result The data detector result that was selected.
+ * @param point The point within @c attributedLabel where the result was tapped.
+ * @returns YES if @c actionSheet should be displayed. NO if @c actionSheet should not be
  *               displayed.
  */
 - (BOOL)attributedLabel:(NIAttributedLabel *)attributedLabel shouldPresentActionSheet:(UIActionSheet *)actionSheet withTextCheckingResult:(NSTextCheckingResult *)result atPoint:(CGPoint)point;
@@ -165,7 +165,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
 /**
  * This method is now deprecated and will eventually be removed, please use attributedText instead.
  *
- *      @fn NIAttributedLabel::attributedString
+ * @fn NIAttributedLabel::attributedString
  */
 
 /** @name Accessing and Detecting Links */
@@ -183,9 +183,9 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * link detection by setting @link NIAttributedLabel::deferLinkDetection deferLinkDetection@endlink
  * to YES.
  *
- *      @sa NIAttributedLabel::dataDetectorTypes
- *      @sa NIAttributedLabel::deferLinkDetection
- *      @fn NIAttributedLabel::autoDetectLinks
+ * @sa NIAttributedLabel::dataDetectorTypes
+ * @sa NIAttributedLabel::deferLinkDetection
+ * @fn NIAttributedLabel::autoDetectLinks
  */
 
 /**
@@ -198,7 +198,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * This offloads the data detection to a separate thread so that your labels can be displayed
  * faster.
  *
- *      @fn NIAttributedLabel::deferLinkDetection
+ * @fn NIAttributedLabel::deferLinkDetection
  */
 
 /**
@@ -207,7 +207,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  *
  * By default this is NSTextCheckingTypeLink. <a href="https://developer.apple.com/library/mac/#documentation/AppKit/Reference/NSTextCheckingResult_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40008798-CH1-DontLinkElementID_50">All available data detector types</a>.
  *
- *      @fn NIAttributedLabel::dataDetectorTypes
+ * @fn NIAttributedLabel::dataDetectorTypes
  */
 
 /**
@@ -216,7 +216,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * Adding any links will immediately enable user interaction on this label. Explicitly added
  * links are removed whenever the text changes.
  *
- *      @fn NIAttributedLabel::addLink:range:
+ * @fn NIAttributedLabel::addLink:range:
  */
 
 /**
@@ -224,7 +224,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  *
  * If you wish to remove automatically-detected links, set autoDetectLinks to NO.
  *
- *      @fn NIAttributedLabel::removeAllExplicitLinks
+ * @fn NIAttributedLabel::removeAllExplicitLinks
  */
 
 /** @name Accessing Link Display Styles */
@@ -238,7 +238,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  *
  *  @image html NIAttributedLabelLinkAttributes.png "Link attributes"
  *
- *      @fn NIAttributedLabel::linkColor
+ * @fn NIAttributedLabel::linkColor
  */
 
 /**
@@ -250,7 +250,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  *
  *  @image html NIAttributedLabelLinkAttributes.png "Link attributes"
  *
- *      @fn NIAttributedLabel::highlightedLinkBackgroundColor
+ * @fn NIAttributedLabel::highlightedLinkBackgroundColor
  */
 
 /**
@@ -260,7 +260,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  *
  * This affects all links in the label.
  *
- *      @fn NIAttributedLabel::linksHaveUnderlines
+ * @fn NIAttributedLabel::linksHaveUnderlines
  */
 
 /**
@@ -269,7 +269,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * This dictionary must contain CoreText attributes. These attributes are applied after the color
  * and underline styles have been applied to the link.
  *
- *      @fn NIAttributedLabel::attributesForLinks
+ * @fn NIAttributedLabel::attributesForLinks
  */
 
 /**
@@ -278,7 +278,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * This dictionary must contain CoreText attributes. These attributes are applied after
  * attributesForLinks have been applied to the highlighted link.
  *
- *      @fn NIAttributedLabel::attributesForHighlightedLink
+ * @fn NIAttributedLabel::attributesForHighlightedLink
  */
 
 /** @name Modifying Rich Text Styles for All Text */
@@ -292,7 +292,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * @c NIVerticalTextAlignmentBottom will align the text to the bottom of the bounds, while
  * @c NIVerticalTextAlignmentMiddle will center the text vertically.
  *
- *      @fn NIAttributedLabel::verticalTextAlignment
+ * @fn NIAttributedLabel::verticalTextAlignment
  */
 
 /**
@@ -302,7 +302,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  *
  * <a href="https://developer.apple.com/library/mac/#documentation/Carbon/Reference/CoreText_StringAttributes_Ref/Reference/reference.html#//apple_ref/c/tdef/CTUnderlineStyle">View all available styles</a>.
  *
- *      @fn NIAttributedLabel::underlineStyle
+ * @fn NIAttributedLabel::underlineStyle
  */
 
 /**
@@ -313,7 +313,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * <a href="https://developer.apple.com/library/mac/#documentation/Carbon/Reference/CoreText_StringAttributes_Ref/Reference/reference.html#//apple_ref/c/tdef/CTUnderlineStyleModifiers">View all available style
  * modifiers</a>.
  *
- *      @fn NIAttributedLabel::underlineStyleModifier
+ * @fn NIAttributedLabel::underlineStyleModifier
  */
 
 /**
@@ -321,7 +321,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  *
  * By default this is zero.
  *
- *      @fn NIAttributedLabel::shadowBlur
+ * @fn NIAttributedLabel::shadowBlur
  */
 
 /**
@@ -331,7 +331,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  *
  * Positive numbers will draw the stroke. Negative numbers will draw the stroke and fill.
  *
- *      @fn NIAttributedLabel::strokeWidth
+ * @fn NIAttributedLabel::strokeWidth
  */
 
 /**
@@ -339,7 +339,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  *
  * By default this is nil.
  *
- *      @fn NIAttributedLabel::strokeColor
+ * @fn NIAttributedLabel::strokeColor
  */
 
 /**
@@ -349,7 +349,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  *
  * Setting this value to zero will make the label use the default line height for the text's font.
  *
- *      @fn NIAttributedLabel::lineHeight
+ * @fn NIAttributedLabel::lineHeight
  */
 
 /**
@@ -360,7 +360,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * The text kern indicates how many points each character should be shifted from its default offset.
  * A positive kern indicates a shift farther away. A negative kern indicates a shift closer.
  *
- *      @fn NIAttributedLabel::textKern
+ * @fn NIAttributedLabel::textKern
  */
 
 /** @name Modifying Tail Truncation Properties */
@@ -378,13 +378,13 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
 /**
  * Sets the text color for text in a given range.
  *
- *      @fn NIAttributedLabel::setTextColor:range:
+ * @fn NIAttributedLabel::setTextColor:range:
  */
 
 /** 
  * Sets the font for text in a given range.
  *
- *      @fn NIAttributedLabel::setFont:range:
+ * @fn NIAttributedLabel::setFont:range:
  */
 
 /**
@@ -395,7 +395,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * <a href="https://developer.apple.com/library/mac/#documentation/Carbon/Reference/CoreText_StringAttributes_Ref/Reference/reference.html#//apple_ref/c/tdef/CTUnderlineStyleModifiers">View all available style
  * modifiers</a>.
  *
- *      @fn NIAttributedLabel::setUnderlineStyle:modifier:range:
+ * @fn NIAttributedLabel::setUnderlineStyle:modifier:range:
  */
 
 /**
@@ -403,13 +403,13 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  *
  * Positive numbers will draw the stroke. Negative numbers will draw the stroke and fill.
  *
- *      @fn NIAttributedLabel::setStrokeWidth:range:
+ * @fn NIAttributedLabel::setStrokeWidth:range:
  */
 
 /**
  * Sets the stroke color for text in a given range.
  *
- *      @fn NIAttributedLabel::setStrokeColor:range:
+ * @fn NIAttributedLabel::setStrokeColor:range:
  */
 
 /**
@@ -418,7 +418,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * The text kern indicates how many points each character should be shifted from its default offset.
  * A positive kern indicates a shift farther away. A negative kern indicates a shift closer.
  *
- *      @fn NIAttributedLabel::setTextKern:range:
+ * @fn NIAttributedLabel::setTextKern:range:
  */
 
 /** @name Adding Inline Images */
@@ -429,9 +429,9 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * The image will have no margins.
  * The image's vertical text alignment will be NIVerticalTextAlignmentBottom.
  *
- *      @param image The image to add to the receiver.
- *      @param index The index into the receiver's text at which to insert the image.
- *      @fn NIAttributedLabel::insertImage:atIndex:
+ * @param image The image to add to the receiver.
+ * @param index The index into the receiver's text at which to insert the image.
+ * @fn NIAttributedLabel::insertImage:atIndex:
  */
 
 /**
@@ -439,24 +439,24 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  *
  * The image's vertical text alignment will be NIVerticalTextAlignmentBottom.
  *
- *      @param image The image to add to the receiver.
- *      @param index The index into the receiver's text at which to insert the image.
- *      @param margins The space around the image on all sides in points.
- *      @fn NIAttributedLabel::insertImage:atIndex:margins:
+ * @param image The image to add to the receiver.
+ * @param index The index into the receiver's text at which to insert the image.
+ * @param margins The space around the image on all sides in points.
+ * @fn NIAttributedLabel::insertImage:atIndex:margins:
  */
 
 /**
  * Inserts the given image inline at the given index in the receiver's text.
  *
- *      @attention
+ * @attention
  *      Images do not currently support NIVerticalTextAlignmentTop and the receiver will fire
  *      multiple debug assertions if you attempt to use it.
  *
- *      @param image The image to add to the receiver.
- *      @param index The index into the receiver's text at which to insert the image.
- *      @param margins The space around the image on all sides in points.
- *      @param verticalTextAlignment The position of the text relative to the image.
- *      @fn NIAttributedLabel::insertImage:atIndex:margins:verticalTextAlignment:
+ * @param image The image to add to the receiver.
+ * @param index The index into the receiver's text at which to insert the image.
+ * @param margins The space around the image on all sides in points.
+ * @param verticalTextAlignment The position of the text relative to the image.
+ * @fn NIAttributedLabel::insertImage:atIndex:margins:verticalTextAlignment:
  */
 
 /** @name Accessibility */
@@ -469,7 +469,7 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * screen location. If this happens you must call -invalidateAccessibleElements in order to force
  * the label to refresh its accessibile elements.
  *
- *      @fn NIAttributedLabel::invalidateAccessibleElements
+ * @fn NIAttributedLabel::invalidateAccessibleElements
  */
 
 /** @name Accessing the Delegate */
@@ -480,5 +480,5 @@ extern NSString* const NIAttributedLabelLinkAttributeName; // Value is an NSText
  * The delegate must adopt the NIAttributedLabelDelegate protocol. The NIAttributedLabel class,
  * which does not strong the delegate, invokes each protocol method the delegate implements.
  *
- *      @fn NIAttributedLabel::delegate
+ * @fn NIAttributedLabel::delegate
  */

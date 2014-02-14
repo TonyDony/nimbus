@@ -25,7 +25,7 @@
 /**
  * A page in the Overview.
  *
- *      @ingroup Overview-Pages
+ * @ingroup Overview-Pages
  */
 @interface NIOverviewPageView : UIView
 
@@ -79,7 +79,7 @@
 /**
  * A page that renders a graph and two labels.
  *
- *      @ingroup Overview-Pages
+ * @ingroup Overview-Pages
  */
 @interface NIOverviewGraphPageView : NIOverviewPageView <
   NIOverviewGraphViewDataSource
@@ -103,7 +103,7 @@
  *
  * @image html overview-memory1.png "The memory page."
  *
- *      @ingroup Overview-Pages
+ * @ingroup Overview-Pages
  */
 @interface NIOverviewMemoryPageView : NIOverviewGraphPageView {
 @private
@@ -119,7 +119,7 @@
  *
  * @image html overview-disk1.png "The disk page."
  *
- *      @ingroup Overview-Pages
+ * @ingroup Overview-Pages
  */
 @interface NIOverviewDiskPageView : NIOverviewGraphPageView {
 @private
@@ -135,7 +135,7 @@
  *
  * @image html overview-log1.png "The log page."
  *
- *      @ingroup Overview-Pages
+ * @ingroup Overview-Pages
  */
 @interface NIOverviewConsoleLogPageView : NIOverviewPageView {
 @private
@@ -151,7 +151,7 @@
  *
  * @image html overview-maxloglevel1.png "The max log level page."
  *
- *      @ingroup Overview-Pages
+ * @ingroup Overview-Pages
  */
 @interface NIOverviewMaxLogLevelPageView : NIOverviewPageView {
 @private
@@ -167,7 +167,7 @@
 /**
  * A page that shows information regarding an in-memory cache.
  *
- *      @ingroup Overview-Pages
+ * @ingroup Overview-Pages
  */
 @interface NIOverviewMemoryCachePageView : NIOverviewGraphPageView
 
@@ -183,7 +183,7 @@
 /**
  * A page that adds run-time inspection features.
  *
- *      @ingroup Overview-Pages
+ * @ingroup Overview-Pages
  */
 @interface NIInspectionOverviewPageView : NIOverviewPageView
 @end

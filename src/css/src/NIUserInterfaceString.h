@@ -21,7 +21,7 @@
 /**
  * The notification key for when a strings file has changed.
  *
- *      @ingroup NimbusCSS
+ * @ingroup NimbusCSS
  *
  * This notification will be sent globally at the moment.
  *

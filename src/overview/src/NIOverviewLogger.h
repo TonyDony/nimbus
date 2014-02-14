@@ -28,7 +28,7 @@ extern NSString* const NIOverviewLoggerDidAddEventLog;
 /**
  * The Overview logger.
  *
- *      @ingroup Overview-Logger
+ * @ingroup Overview-Logger
  *
  * This object stores all of the historical information used to draw the graphs in the
  * Overview memory and disk pages, as well as the console log page.
@@ -105,7 +105,7 @@ extern NSString* const NIOverviewLoggerDidAddEventLog;
 /**
  * The basic requirements for a log entry.
  *
- *      @ingroup Overview-Logger-Entries
+ * @ingroup Overview-Logger-Entries
  *
  * A basic log entry need only define a timestamp in order to be particularly useful.
  */
@@ -132,7 +132,7 @@ extern NSString* const NIOverviewLoggerDidAddEventLog;
 /**
  * A device log entry.
  *
- *      @ingroup Overview-Logger-Entries
+ * @ingroup Overview-Logger-Entries
  */
 @interface NIOverviewDeviceLogEntry : NIOverviewLogEntry
 
@@ -174,7 +174,7 @@ extern NSString* const NIOverviewLoggerDidAddEventLog;
 /**
  * A console log entry.
  *
- *      @ingroup Overview-Logger-Entries
+ * @ingroup Overview-Logger-Entries
  */
 @interface NIOverviewConsoleLogEntry : NIOverviewLogEntry
 
@@ -203,7 +203,7 @@ typedef enum {
 /**
  * An event log entry.
  *
- *      @ingroup Overview-Logger-Entries
+ * @ingroup Overview-Logger-Entries
  */
 @interface NIOverviewEventLogEntry : NIOverviewLogEntry
 
