@@ -658,6 +658,7 @@ const CGFloat NIPagingScrollViewDefaultPageMargin = 10;
   }
   [self.pagingScrollView setContentOffset:offset animated:animated];
   if (!animated) {
+    [self resetSurroundingPages];
     [self didAnimateToPage:pageIndex];
   }
   return YES;
