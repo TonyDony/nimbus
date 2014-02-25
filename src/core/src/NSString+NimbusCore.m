@@ -33,6 +33,16 @@ NI_FIX_CATEGORY_BUG(NSStringNimbusCore)
  */
 @implementation NSString (NimbusCore)
 
+#if DEBUG
+- (void)complain {
+  NSLog(@"Please remove NSString+NimbusCore.m from your project as it is no longer supported "
+        @"(see NIFoundationMethods.h for replacement APIs).");
+}
+#define COMPLAIN_IN_DEBUG() [self complain]
+#else
+#define COMPLAIN_IN_DEBUG()
+#endif
+
 /**
  * Calculates the height of this text given the font, max width, and line break mode.
  *
@@ -42,6 +52,7 @@ NI_FIX_CATEGORY_BUG(NSStringNimbusCore)
 - (CGFloat)heightWithFont:(UIFont*)font
        constrainedToWidth:(CGFloat)width
             lineBreakMode:(NSLineBreakMode)lineBreakMode {
+  COMPLAIN_IN_DEBUG();
   return [self sizeWithFont:font
           constrainedToSize:CGSizeMake(width, CGFLOAT_MAX)
               lineBreakMode:lineBreakMode].height;
@@ -60,6 +71,7 @@ NI_FIX_CATEGORY_BUG(NSStringNimbusCore)
  * in the query for that parameter.
  */
 - (NSDictionary*)queryContentsUsingEncoding:(NSStringEncoding)encoding {
+  COMPLAIN_IN_DEBUG();
   return NIQueryDictionaryFromStringUsingEncoding(self, encoding);
 }
 
@@ -67,6 +79,7 @@ NI_FIX_CATEGORY_BUG(NSStringNimbusCore)
  * Returns a string that has been escaped for use as a URL parameter.
  */
 - (NSString *)stringByAddingPercentEscapesForURLParameter {
+  COMPLAIN_IN_DEBUG();
   return NIStringByAddingPercentEscapesForURLParameterString(self);
 }
 
@@ -74,6 +87,7 @@ NI_FIX_CATEGORY_BUG(NSStringNimbusCore)
  * Parses a URL, adds query parameters to its query, and re-encodes it as a new URL.
  */
 - (NSString*)stringByAddingQueryDictionary:(NSDictionary*)query {
+  COMPLAIN_IN_DEBUG();
   return NIStringByAddingQueryDictionaryToString(self, query);
 }
 
@@ -83,6 +97,7 @@ NI_FIX_CATEGORY_BUG(NSStringNimbusCore)
  * @returns md5 hash of this string.
  */
 - (NSString*)md5Hash {
+  COMPLAIN_IN_DEBUG();
   return NIMD5HashFromData([self dataUsingEncoding:NSUTF8StringEncoding]);
 }
 
@@ -92,6 +107,7 @@ NI_FIX_CATEGORY_BUG(NSStringNimbusCore)
  * @returns SHA1 hash of this string.
  */
 - (NSString*)sha1Hash {
+  COMPLAIN_IN_DEBUG();
   return NISHA1HashFromData([self dataUsingEncoding:NSUTF8StringEncoding]);
 }
 
