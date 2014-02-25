@@ -33,6 +33,14 @@ NI_FIX_CATEGORY_BUG(NSStringNimbusCore)
  */
 @implementation NSString (NimbusCore)
 
++ (void)load {
+  if (DEBUG) {
+    NSLog(@"Please remove NSString+NimbusCore.m from your project as it is no longer supported "
+          @"(see NIFoundationMethods.h for replacement APIs).");
+    NIDASSERT(NO); // Note that you can continue execution.
+  }
+}
+
 /**
  * Calculates the height of this text given the font, max width, and line break mode.
  *
