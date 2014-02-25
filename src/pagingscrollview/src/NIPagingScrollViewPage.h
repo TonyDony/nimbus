@@ -34,3 +34,9 @@
  *
  * @fn NIPageView::pageIndex
  */
+
+/**
+ * This class will be deleted at the earliest convenience.
+ */
+@interface NIPageView : NIPagingScrollViewPage
+@end
