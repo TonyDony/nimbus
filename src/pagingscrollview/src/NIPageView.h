@@ -16,7 +16,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "NIPagingScrollViewPage.h"
+#import "NIPagingScrollView.h"
+
+@interface NIPagingScrollViewPage : NIRecyclableView <NIPagingScrollViewPage>
+@property (nonatomic) NSInteger pageIndex;
+@end
 
 /**
  * Use NIPagingScrollViewPage instead.
@@ -25,6 +29,5 @@
  *
  * @ingroup NimbusPagingScrollView
  */
-__NI_DEPRECATED_METHOD
 @interface NIPageView : NIPagingScrollViewPage
 @end
