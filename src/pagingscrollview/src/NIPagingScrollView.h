@@ -195,6 +195,15 @@ typedef enum {
 
 @end
 
+// Deprecated methods.
+// This category will be removed at the earliest convenience.
+@interface NIPagingScrollView (DeprecatedMethods)
+
+// Use -[NIPagingScrollView scrollView] instead.
+- (UIScrollView *)pagingScrollView;
+
+@end
+
 /** @name Data Source */
 
 /**
