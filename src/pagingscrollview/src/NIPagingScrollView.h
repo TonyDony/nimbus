@@ -87,6 +87,10 @@ typedef enum {
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 
+#pragma mark Subclassing
+
+- (NSMutableSet *)visiblePages;
+
 @end
 
 /**
