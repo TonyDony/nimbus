@@ -18,10 +18,6 @@
 
 #import <Foundation/Foundation.h>
 
-#ifndef DEBUG
-#define DEBUG 0
-#endif
-
 /**
  * For inspecting code and writing to logs in debug builds.
  *

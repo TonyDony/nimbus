@@ -25,13 +25,15 @@
 
 @implementation NIPageView
 
+#if DEBUG
+
 // If this implementation block is compiled, notify clients to switch.
 + (void)load {
-  if (DEBUG) {
-    NSLog(@"Please remove all references to NIPageView from your project and switch to "
-          @"NIPagingScrollViewPage (see NIPagingScrollViewPage.h/m).");
-    NIDASSERT(NO); // Note that you can continue execution.
-  }
+  NSLog(@"Please remove all references to NIPageView from your project and switch to "
+        @"NIPagingScrollViewPage (see NIPagingScrollViewPage.h/m).");
+  NIDASSERT(NO); // Note that you can continue execution.
 }
+
+#endif  // DEBUG
 
 @end

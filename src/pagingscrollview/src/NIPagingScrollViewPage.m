@@ -27,13 +27,14 @@
 
 @implementation NIPageView
 
+#if DEBUG
 // If the client references NIPageView at runtime, warn them to switch to NIPagingScrollViewPage.
 + (void)initialize {
-  if (DEBUG) {
-    NSLog(@"Please remove all references to NIPageView from your project and switch to "
-          @"NIPagingScrollViewPage (see NIPagingScrollViewPage.h/m).");
-    NIDASSERT(NO); // Note that you can continue execution.
-  }
+  NSLog(@"Please remove all references to NIPageView from your project and switch to "
+        @"NIPagingScrollViewPage (see NIPagingScrollViewPage.h/m).");
+  NIDASSERT(NO); // Note that you can continue execution.
 }
+
+#endif  // DEBUG
 
 @end
