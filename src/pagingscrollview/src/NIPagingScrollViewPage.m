@@ -16,6 +16,8 @@
 
 #import "NIPagingScrollViewPage.h"
 
+#import <dispatch/dispatch.h>
+
 #import "NimbusCore.h"
 
 #if !defined(__has_feature) || !__has_feature(objc_arc)
@@ -28,11 +30,16 @@
 @implementation NIPageView
 
 #if DEBUG
+
 // If the client references NIPageView at runtime, warn them to switch to NIPagingScrollViewPage.
-+ (void)initialize {
-  NSLog(@"Please remove all references to NIPageView from your project and switch to "
-        @"NIPagingScrollViewPage (see NIPagingScrollViewPage.h/m).");
-  NIDASSERT(NO); // Note that you can continue execution.
+- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    NSLog(@"Please remove all references to NIPageView from your project and switch to "
+          @"NIPagingScrollViewPage (see NIPagingScrollViewPage.h/m).");
+    NIDASSERT(NO); // Note that you can continue execution.
+  });
+  return [super initWithReuseIdentifier:reuseIdentifier];
 }
 
 #endif  // DEBUG
