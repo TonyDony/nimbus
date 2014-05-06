@@ -26,22 +26,3 @@
 
 @implementation NIPagingScrollViewPage
 @end
-
-@implementation NIPageView
-
-#if DEBUG
-
-// If the client references NIPageView at runtime, warn them to switch to NIPagingScrollViewPage.
-- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    NSLog(@"Please remove all references to NIPageView from your project and switch to "
-          @"NIPagingScrollViewPage (see NIPagingScrollViewPage.h/m).");
-    NIDASSERT(NO); // Note that you can continue execution.
-  });
-  return [super initWithReuseIdentifier:reuseIdentifier];
-}
-
-#endif  // DEBUG
-
-@end
