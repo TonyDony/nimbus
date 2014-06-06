@@ -2394,19 +2394,19 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXLegacyTarget section */
-		66832C9D143D649D003E413C /* Nimbus CSS Grammar */ = {
+		66832C9D143D649D003E413C /* Nimbus_CSS_Grammar */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION)";
-			buildConfigurationList = 66832C9E143D649D003E413C /* Build configuration list for PBXLegacyTarget "Nimbus CSS Grammar" */;
+			buildConfigurationList = 66832C9E143D649D003E413C /* Build configuration list for PBXLegacyTarget "Nimbus_CSS_Grammar" */;
 			buildPhases = (
 			);
 			buildToolPath = ./generate;
 			buildWorkingDirectory = css/grammar;
 			dependencies = (
 			);
-			name = "Nimbus CSS Grammar";
+			name = "Nimbus_CSS_Grammar";
 			passBuildSettingsInEnvironment = 1;
-			productName = "Nimbus CSS Grammar";
+			productName = "Nimbus_CSS_Grammar";
 		};
 /* End PBXLegacyTarget section */
 
@@ -2981,7 +2981,7 @@
 				66A03C1813E6E85E00B514F3 /* NimbusCoreTests */,
 				66C3A6A0143D61130048542F /* NimbusCss */,
 				66C3A6AD143D61140048542F /* NimbusCssTests */,
-				66832C9D143D649D003E413C /* Nimbus CSS Grammar */,
+				66832C9D143D649D003E413C /* Nimbus_CSS_Grammar */,
 				6675731113E771380076F555 /* NimbusInterapp */,
 				6675731E13E771380076F555 /* NimbusInterappTests */,
 				66A03CBE13E6F0ED00B514F3 /* NimbusLauncher */,
@@ -5465,7 +5465,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66832C9E143D649D003E413C /* Build configuration list for PBXLegacyTarget "Nimbus CSS Grammar" */ = {
+		66832C9E143D649D003E413C /* Build configuration list for PBXLegacyTarget "Nimbus_CSS_Grammar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66832C9F143D649D003E413C /* Debug */,
