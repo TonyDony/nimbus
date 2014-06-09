@@ -346,7 +346,7 @@
                                   cropRect:cropRect
                                contentMode:contentMode
                               scaleOptions:self.scaleOptions
-                            expirationDate:nil];
+                            expirationDate:[self expirationDate]];
         }
 
       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
