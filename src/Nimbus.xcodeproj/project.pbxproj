@@ -314,8 +314,6 @@
 		C7BBC6FE16DDC0E700833DC9 /* NITextField.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BBC6B716DDC0DB00833DC9 /* NITextField.h */; };
 		C7BBC70416DDC12800833DC9 /* NITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BBC6B816DDC0DB00833DC9 /* NITextField.m */; };
 		C7BBC71116DE66BD00833DC9 /* media-rulesets.css in Resources */ = {isa = PBXBuildFile; fileRef = C7BBC71016DE66BD00833DC9 /* media-rulesets.css */; };
-		D509DDDF18B53AE500895428 /* NIPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = D509DDDD18B53AE500895428 /* NIPageView.h */; };
-		D509DDE018B53AE500895428 /* NIPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D509DDDE18B53AE500895428 /* NIPageView.m */; };
 		D526CF4B18B826A600991F7A /* NICellCatalogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D526CF4A18B826A600991F7A /* NICellCatalogTests.m */; };
 		DB3A231913FD4B8E00614220 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A03C0C13E6E85E00B514F3 /* Foundation.framework */; };
 		DB3A231D13FD4B8E00614220 /* libNimbusAttributedLabel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3A230913FD4B8E00614220 /* libNimbusAttributedLabel.a */; };
