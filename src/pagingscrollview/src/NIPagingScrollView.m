@@ -709,11 +709,4 @@ const CGFloat NIPagingScrollViewDefaultPageMargin = 10;
   return _visiblePages;
 }
 
-#pragma mark - Deprecated Methods
-
-- (UIScrollView *)pagingScrollView {
-  NIDASSERT(NO); // This method is deprecated. Use -[NIPagingScrollView scrollView] instead.
-  return [self scrollView];
-}
-
 @end
